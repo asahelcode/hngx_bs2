@@ -2,7 +2,6 @@ const { validationResult } = require("express-validator");
 const Person = require("../models/PersonSchema");
 
 const createPerson = async (req, res) => {
-  console.log(req.body);
   const error = validationResult(req);
 
   if (!error.isEmpty()) {
