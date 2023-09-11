@@ -2,8 +2,8 @@
 
   This is a simple **CRUD** application
   ## Prerequisite
-    1. Make sure have node installed globally on your computer
-    2. Make sure curl is install
+    1. node
+    2. curl
   ## Setup
 > Note: Ensure you are within the HNGX_BS2 folder
    
