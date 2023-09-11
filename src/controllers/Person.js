@@ -2,6 +2,7 @@ const { validationResult } = require("express-validator");
 const Person = require("../models/PersonSchema");
 
 const createPerson = async (req, res) => {
+  console.log(req.body);
   const error = validationResult(req);
 
   if (!error.isEmpty()) {
@@ -13,7 +14,7 @@ const createPerson = async (req, res) => {
   try {
     const personExist = await Person.find({ name });
 
-    if (personExist.length !== 0) {
+    if (!personExist.length) {
       return res.json({
         message: `Person with name ${name} already exist`,
       });
@@ -41,7 +42,7 @@ const getPerson = async (req, res) => {
   try {
     const person = await Person.find({ name });
 
-    if (!person) {
+    if (!person.length) {
       return res.status(404).json({ message: "Person not found!" });
     }
 
