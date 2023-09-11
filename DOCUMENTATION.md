@@ -2,7 +2,7 @@
 
   This is a simple **CRUD** application
   ## Prerequisite
-    1. node
+    1. node(npm)
     2. curl
   ## Setup
 > Note: Ensure you are within the HNGX_BS2 folder
