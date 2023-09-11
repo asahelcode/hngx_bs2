@@ -14,7 +14,7 @@ const createPerson = async (req, res) => {
   try {
     const personExist = await Person.find({ name });
 
-    if (!personExist.length) {
+    if (personExist.length !== 0) {
       return res.json({
         message: `Person with name ${name} already exist`,
       });
@@ -42,7 +42,7 @@ const getPerson = async (req, res) => {
   try {
     const person = await Person.find({ name });
 
-    if (!person.length) {
+    if (person.length === 0) {
       return res.status(404).json({ message: "Person not found!" });
     }
 
