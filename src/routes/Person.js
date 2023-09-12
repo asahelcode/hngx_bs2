@@ -1,7 +1,6 @@
 const express = require("express");
 const {
   validatePersonBody,
-  validatePersonParam,
   validatePersonUpdateBody,
 } = require("../middleware/validation");
 const {
@@ -15,10 +14,10 @@ const Router = express.Router();
 
 Router.post("/", validatePersonBody, createPerson);
 
-Router.get("/:name", validatePersonParam, getPerson);
+Router.get("/:id", getPerson);
 
-Router.patch("/:uname", validatePersonUpdateBody, updatePerson);
+Router.patch("/:id", validatePersonBody, updatePerson);
 
-Router.delete("/:name", validatePersonParam, deletePerson);
+Router.delete("/:id", deletePerson);
 
 module.exports = Router;

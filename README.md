@@ -38,13 +38,13 @@ $ curl -H "Content-Type: application/json" -d "{\"name\": \"philip\"}" http://lo
 ```
 
 
-`GET /api/:name`
+`GET /api/:user_id`
 
  #### Returns detail of Person
 
  #### Sample Request
  ```bash
-$ curl -X GET http://localhost:3000/api/Henry
+$ curl -X GET http://localhost:3000/api/64ff4375a4c23d8fcb95a4f5
  ```
 
 #### Response
@@ -61,14 +61,14 @@ $ curl -X GET http://localhost:3000/api/Henry
  }
 ```
 
-`PATCH /api/:uname`
+`PATCH /api/:user_id`
 
 #### Modify person detail
 
 #### Sample Request
 
 ```bash
-$ curl -X PATCH -H "Content-Type: application/json" -d '{\"name\": \"tomson\"}' http://localhost:3000/api/Henry
+$ curl -X PATCH -H "Content-Type: application/json" -d '{\"name\": \"tomson\"}' http://localhost:3000/api/64ff4375a4c23d8fcb95a4f5
 ```
 
 #### Response
@@ -84,14 +84,14 @@ $ curl -X PATCH -H "Content-Type: application/json" -d '{\"name\": \"tomson\"}' 
 }
 ```
 
-`DELETE /api/:name`
+`DELETE /api/:user_id`
 
 ##### Delete a person
 
 #### Sample Request
 
 ```bash
-$ curl -X DELETE http://localhost:3000/api/Henry
+$ curl -X DELETE http://localhost:3000/api/64ff4375a4c23d8fcb95a4f5
 ```
 
 #### Response
@@ -104,6 +104,8 @@ $ curl -X DELETE http://localhost:3000/api/Henry
         "__v":0
     }
 }
+
+https://hngx-crud-77rs.onrender.com
 ```
 ### Author
   Gray

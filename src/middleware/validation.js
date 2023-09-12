@@ -1,14 +1,5 @@
 const { body, param } = require("express-validator");
 
-const validatePersonParam = [
-  param("name")
-    .isString()
-    .trim()
-    .matches(/^[a-zA-Z ]+$/)
-    .isLength({ min: 1, max: 50 })
-    .withMessage("Name must be a string"),
-];
-
 const validatePersonBody = [
   body("name")
     .isString()
@@ -21,13 +12,6 @@ const validatePersonBody = [
 ];
 
 const validatePersonUpdateBody = [
-  param("uname")
-    .isString()
-    .notEmpty()
-    .matches(/^[a-zA-Z ]+$/)
-    .trim()
-    .isLength({ min: 1, max: 50 })
-    .withMessage("Name must be a string"),
   body("name")
     .isString()
     .notEmpty()
@@ -39,7 +23,6 @@ const validatePersonUpdateBody = [
 ];
 
 module.exports = {
-  validatePersonParam,
   validatePersonBody,
   validatePersonUpdateBody,
 };
