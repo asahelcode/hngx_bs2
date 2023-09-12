@@ -22,7 +22,7 @@ const createPerson = async (req, res) => {
     const newPerson = new Person({ name });
     await newPerson.save();
 
-    res.status(200).json({ message: "Person created successfully", newPerson });
+    res.status(200)
   } catch (err) {
     console.error(err);
     res.status(500).json({ message: "Internal server error" });
@@ -68,7 +68,7 @@ const updatePerson = async (req, res) => {
       return res.status(404).json({ message: "Person not found!" });
     }
 
-    res.status(200).json({ message: "Successfully Updated", updatedPerson });
+    res.status(200)
   } catch (err) {
     console.log(err);
     res.status(500).json({ message: "Internal Server Error" });
@@ -87,7 +87,6 @@ const deletePerson = async (req, res) => {
 
     res
       .status(200)
-      .json({ message: "Person successfully deleted", deletedPerson });
   } catch (err) {
     console.error(err);
   }
