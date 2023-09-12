@@ -105,7 +105,6 @@ $ curl -X DELETE http://localhost:3000/api/64ff4375a4c23d8fcb95a4f5
     }
 }
 
-https://hngx-crud-77rs.onrender.com
 ```
 ### Author
   Gray
