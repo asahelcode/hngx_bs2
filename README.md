@@ -51,8 +51,8 @@ $ curl -X GET http://localhost:3000/api/64ff4375a4c23d8fcb95a4f5
 
 ```json
  {
-  "person": [
-    {
+  "person": [**
+    {**
         "_id":"64ff0452929d96e499f25901",
         "name":"Henry",
         "__v":0

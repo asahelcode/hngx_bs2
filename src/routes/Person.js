@@ -16,7 +16,7 @@ Router.post("/", validatePersonBody, createPerson);
 
 Router.get("/:id", getPerson);
 
-Router.patch("/:id", validatePersonBody, updatePerson);
+Router.put("/:id", validatePersonBody, updatePerson);
 
 Router.delete("/:id", deletePerson);
 
